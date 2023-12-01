@@ -16,10 +16,15 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "AoC2023"),
+            name: "AoC2023",
+            resources: [
+                .copy("Day1/Resources/Day1.txt"),
+            ]),
         .testTarget(
             name: "AoC2023Tests",
             dependencies: ["AoC2023"]),
     ]
 )
+
+
 
