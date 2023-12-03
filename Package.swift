@@ -18,6 +18,7 @@ let package = Package(
         .target(
             name: "AoC2023",
             resources: [
+                .copy("Day3/Resources/Day3.txt"),
                 .copy("Day2/Resources/Day2.txt"),
                 .copy("Day1/Resources/Day1.txt"),
             ]),
@@ -26,6 +27,7 @@ let package = Package(
             dependencies: ["AoC2023"]),
     ]
 )
+
 
 
 
