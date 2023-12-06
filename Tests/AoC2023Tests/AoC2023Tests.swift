@@ -68,7 +68,7 @@ final class AoC2023Tests: XCTestCase {
     
     func testDay5Part1() throws {
         let file = file(forDay: 5)
-        var input = parseDay5Input(from: file)
+        let input = parseDay5Input(from: file)
 
         let result = day5part1(input: input)
         XCTAssertEqual(result, 309796150)
@@ -81,4 +81,21 @@ final class AoC2023Tests: XCTestCase {
         let result = day5part2(input: input)
         XCTAssertEqual(result, -1)
     }
+    
+    func testDay6Part1() throws {
+        let file = file(forDay: 6)
+        let input = parseDay6InputPart1(from: file)
+        
+        let result = day6part1(input: input)
+        XCTAssertEqual(result, 608902)
+    }
+    
+    func testDay6Part2() throws {
+        let file = file(forDay: 6)
+        let input = parseDay6InputPart2(from: file)
+        
+        let result = day6part2(input: input)
+        XCTAssertEqual(result, 46173809)
+    }
 }
+
