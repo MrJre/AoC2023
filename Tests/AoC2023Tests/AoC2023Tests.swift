@@ -97,5 +97,25 @@ final class AoC2023Tests: XCTestCase {
         let result = day6part2(input: input)
         XCTAssertEqual(result, 46173809)
     }
-}
+    
+    func testDay7Part1() throws {
+        let strengths: [CardType: Int] = [.two: 2, .three: 3, .four: 4, .five: 5, .six: 6, .seven: 7, .eight: 8, .nine: 9, .ten: 10, .jack: 11, .queen: 12, .king: 13, .ace: 14]
 
+        let file = file(forDay: 7)
+        let input = parseDay7InputPart1(from: file, strengths: strengths)
+
+        let result = day7part1(input: input)
+        XCTAssertEqual(result, 251287184)
+    }
+    
+    func testDay7Part2() throws {
+        let strengths: [CardType: Int] = [.jack: 1, .two: 2, .three: 3, .four: 4, .five: 5, .six: 6, .seven: 7, .eight: 8, .nine: 9, .ten: 10, .queen: 12, .king: 13, .ace: 14]
+
+
+        let file = file(forDay: 7)
+        let input = parseDay7InputPart2(from: file, strengths: strengths)
+        
+        let result = day7part2(input: input)
+        XCTAssertEqual(result, -1)
+    }
+}
