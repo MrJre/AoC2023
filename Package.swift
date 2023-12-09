@@ -10,7 +10,8 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "AoC2023",
-            targets: ["AoC2023"]),
+            targets: ["AoC2023"]
+        ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -18,6 +19,7 @@ let package = Package(
         .target(
             name: "AoC2023",
             resources: [
+                .copy("Day9/Resources/Day9.txt"),
                 .copy("Day8/Resources/Day8.txt"),
                 .copy("Day7/Resources/Day7.txt"),
                 .copy("Day6/Resources/Day6.txt"),
@@ -26,12 +28,14 @@ let package = Package(
                 .copy("Day3/Resources/Day3.txt"),
                 .copy("Day2/Resources/Day2.txt"),
                 .copy("Day1/Resources/Day1.txt"),
-            ]),
+            ]
+        ),
         .testTarget(
             name: "AoC2023Tests",
             dependencies: ["AoC2023"]),
     ]
 )
+
 
 
 
