@@ -13,12 +13,19 @@ let package = Package(
             targets: ["AoC2023"]
         ),
     ],
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-algorithms", from: "1.2.0"),
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "AoC2023",
+            dependencies: [
+                .product(name: "Algorithms", package: "swift-algorithms"),
+            ],
             resources: [
+                .copy("Day11/Resources/Day11.txt"),
                 .copy("Day10/Resources/Day10.txt"),
                 .copy("Day9/Resources/Day9.txt"),
                 .copy("Day8/Resources/Day8.txt"),
