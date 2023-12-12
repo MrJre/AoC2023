@@ -25,6 +25,7 @@ let package = Package(
                 .product(name: "Algorithms", package: "swift-algorithms"),
             ],
             resources: [
+                .copy("Day12/Resources/Day12.txt"),
                 .copy("Day11/Resources/Day11.txt"),
                 .copy("Day10/Resources/Day10.txt"),
                 .copy("Day9/Resources/Day9.txt"),
@@ -43,6 +44,7 @@ let package = Package(
             dependencies: ["AoC2023"]),
     ]
 )
+
 
 
 
