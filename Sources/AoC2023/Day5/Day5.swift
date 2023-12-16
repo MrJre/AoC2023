@@ -26,13 +26,7 @@ func day5part2(input: (seeds: [Int], maps: [Map])) -> Int {
         location += 1
     }
 
-//    let locations = seedRanges.flatMap {
-//        return findLocationRange(for: $0, maps: input.maps)
-//    }
-
-//    print(locations)
-
-    return location - 1 // locations.map { $0.lowerBound }.min()!
+    return location - 1
 }
 
 func findLocation(for seed: Int, maps: [Map]) -> Int {
