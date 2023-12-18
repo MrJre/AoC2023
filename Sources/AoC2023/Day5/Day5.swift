@@ -1,9 +1,6 @@
 import Foundation
 
 func day5part1(input: (seeds: [Int], maps: [Map])) -> Int {
-
-    let locations = input.seeds.map { findLocation(for: $0, maps: input.maps) }
-
     let seedRanges = input.seeds.map { $0...$0 }
     let locationRanges = seedRanges.flatMap { findLocationRange(for: $0, maps: input.maps) }
     return locationRanges.map { $0.lowerBound }.min()!
